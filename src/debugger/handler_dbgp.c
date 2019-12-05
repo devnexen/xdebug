@@ -1776,7 +1776,7 @@ static int xdebug_add_filtered_symboltable_var(zval *symbol, int num_args, va_li
 	 * tables, but for now, we'll just ignore them. */
 	if (!hash_key->key) { return 0; }
 
-	if (hash_key->key->val[0] == '\0' || hash_key->key->len == 0) { return 0; }
+	if (hash_key->key->val[0] == '\0') { return 0; }
 
 	if (strcmp("argc", hash_key->key->val) == 0) { return 0; }
 	if (strcmp("argv", hash_key->key->val) == 0) { return 0; }
